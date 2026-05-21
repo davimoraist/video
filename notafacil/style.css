@@ -1,0 +1,50 @@
+ @charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.cabeca{
+    background-color: rgb(213, 134, 16);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.cabeca input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.cabeca button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(213, 134, 16); 
+    border: #333 solid 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.cabeca button:hover{
+    background-color: rgb(255, 165, 0);
+}
