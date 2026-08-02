@@ -60,50 +60,7 @@
  }
 
  /* Menu de Navegação */
- nav ul {
-     display: flex;
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     gap: 30px;
- }
-
- nav ul li {
-     font-family: var(--font-body);
-     font-size: 16px;
-     font-weight: 600;
-     text-transform: uppercase;
-     letter-spacing: 1.5px;
-     color: #e0e0e0;
-     cursor: pointer;
-     padding: 8px 12px;
-     border-radius: 6px;
-     transition: all 0.3s ease;
-     position: relative;
- }
-
- /* Efeito Hover Elegante no Menu */
- nav ul li:hover {
-     color: var(--accent-gold);
-     background-color: rgba(255, 255, 255, 0.05);
- }
-
- nav ul li::after {
-     content: '';
-     position: absolute;
-     width: 0;
-     height: 2px;
-     bottom: 0;
-     left: 50%;
-     background-color: var(--accent-gold);
-     transition: all 0.3s ease;
-     transform: translateX(-50%);
- }
-
- nav ul li:hover::after {
-     width: 60%;
- }
-
+ 
  /* Bloco de Texto Principal */
  .texto {
      max-width: 580px;
@@ -201,3 +158,695 @@
      margin: 0;
      color: #000;
  }
+ .sevico .Pacotes {
+     display: flex;
+     margin: 90px 30px;
+     justify-content: center;
+     gap: 20px;
+     /* Cria um espaço uniforme entre os cards */
+     flex-wrap: wrap;
+     /* Garante que funcione bem em celulares */
+ }
+
+ .sevico .Pacotes .Plano {
+     background-color: #000;
+     color: #ffffff;
+     width: 300px;
+     /* Largura adequada para cards de planos */
+     padding: 24px;
+     /* Espaçamento interno para o conteúdo respirar */
+     border-radius: 8px;
+     /* Cantos levemente arredondados */
+     text-align: center;
+     /* Centraliza todo o texto interno */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     /* Mantém o preço sempre no final */
+ }
+
+.sevico .Pacotes .Plano h3 {
+     font-size: 24px;
+     margin-bottom: 16px;
+     font-family: var(--font-heading);
+ }
+
+.sevico .Pacotes .Plano ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0 0 20px 0;
+ }
+
+ .sevico .Pacotes .Plano ul li {
+     margin-bottom: 8px;
+ }
+
+ .sevico .Pacotes .Plano p {
+     font-size: 20px;
+     font-weight: bold;
+     margin: 0;
+     background-color: #d4af37;
+ }
+ /* --- ESTILIZAÇÃO PREMIUM DA TABELA DE PREÇOS --- */
+ .sevico .preco {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px 15px;
+ }
+
+ .sevico .preco table {
+     border-collapse: separate;
+     border-spacing: 0;
+     width: 100%;
+     max-width: 650px;
+     /* Largura elegante para visualização */
+     background-color: #111111;
+     color: #ffffff;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+     border: 1px solid rgba(212, 175, 55, 0.3);
+     /* Borda dourada sutil */
+ }
+
+ /* Cabeçalho da Tabela */
+ .sevico .preco table tr:first-child td {
+     background-color: var(--accent-gold);
+     color: #000000;
+     font-family: var(--font-heading);
+     font-size: 18px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     padding: 16px;
+     border: none;
+ }
+
+ /* Células Comuns */
+ .sevico .preco table td {
+     padding: 14px 20px;
+     font-family: var(--font-body);
+     font-size: 15px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+     transition: background-color 0.3s ease;
+ }
+
+ /* Alinhamento dos textos da tabela */
+ .sevico .preco table td:first-child {
+     text-align: left;
+     /* Nome do serviço à esquerda */
+     font-weight: 400;
+     color: #e0e0e0;
+ }
+
+ .sevico .preco table td:last-child {
+     text-align: right;
+     /* Preço alinhado à direita */
+     font-weight: 600;
+     color: var(--accent-gold);
+     /* Preço em destaque dourado */
+     font-size: 16px;
+ }
+
+ /* Efeito Zebrado (Linhas alternadas para facilitar a leitura) */
+ .sevico .preco table tr:nth-child(even):not(:first-child) {
+     background-color: rgba(255, 255, 255, 0.02);
+ }
+
+ /* Efeito Hover nas Linhas */
+ .sevico .preco table tr:not(:first-child):hover td {
+     background-color: rgba(212, 175, 55, 0.1);
+     /* Destaque dourado ao passar o mouse */
+     color: #ffffff;
+ }
+
+ /* Remove a linha divisória do último item */
+ .sevico .preco table tr:last-child td {
+     border-bottom: none;
+ }
+
+ .sevico button{
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: var(--accent-gold);
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 60px;
+ }
+ /* --- SEÇÃO DE PRODUTOS --- */
+ .produtos {
+     background-color: #050505;
+     padding: 80px 20px;
+     text-align: center;
+     color: #ffffff;
+ }
+
+ .produtos h2 {
+     font-family: var(--font-title);
+     font-size: 38px;
+     color: #ffffff;
+     margin-bottom: 50px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+ }
+
+ /* Grid para organizar múltiplos produtos */
+ .produtos .produtos-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+     flex-wrap: wrap;
+ }
+
+ /* Card do Produto */
+ .produtos .barbearia-Produtos {
+     background: linear-gradient(145deg, #141414, #0a0a0a);
+     border: 1px solid rgba(212, 175, 55, 0.2);
+     border-radius: 16px;
+     width: 320px;
+     padding: 30px 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+     transition: all 0.4s ease;
+ }
+
+ .produtos .barbearia-Produtos:hover {
+     transform: translateY(-8px);
+     border-color: var(--accent-gold);
+     box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+ }
+
+ /* Moldura Circular da Imagem */
+ .produtos .foto-produto {
+     width: 180px;
+     height: 180px;
+     background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0.6) 70%);
+     border: 2px solid var(--accent-gold);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ .produtos .foto-produto img {
+     max-width: 80%;
+     max-height: 80%;
+     object-fit: contain;
+     transition: transform 0.4s ease;
+ }
+
+ .produtos .barbearia-Produtos:hover .foto-produto img {
+     transform: scale(1.1);
+ }
+
+ /* Informações do Produto */
+ .produtos .barbearia-Produtos h3 {
+     font-family: var(--font-body);
+     font-size: 20px;
+     font-weight: 600;
+     color: #ffffff;
+     margin-bottom: 8px;
+ }
+
+ .produtos .barbearia-Produtos .descricao {
+     font-family: var(--font-body);
+     font-size: 13px;
+     color: #aaaaaa;
+     margin-bottom: 15px;
+ }
+
+ .produtos .barbearia-Produtos .preco-produto {
+     font-family: var(--font-heading);
+     font-size: 22px;
+     font-weight: 700;
+     color: var(--accent-gold);
+     margin-bottom: 20px;
+ }
+
+ /* Botão de Compra */
+ .produtos .barbearia-Produtos .btn-comprar {
+     width: 100%;
+     padding: 12px 0;
+     background-color: transparent;
+     color: var(--accent-gold);
+     border: 1px solid var(--accent-gold);
+     border-radius: 8px;
+     font-family: var(--font-body);
+     font-size: 14px;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .produtos .barbearia-Produtos .btn-comprar:hover {
+     background-color: var(--accent-gold);
+     color: #000000;
+ }
+
+  /* --- SEÇÃO BARBEIROS --- */
+  .barbeiro {
+      display: flex;
+      align-items: center;
+      /* Alinha a imagem e o texto no centro verticalmente */
+      justify-content: center;
+      max-width: 1100px;
+      /* Limita a largura para não esticar demais em telas grandes */
+      margin: 80px auto;
+      /* Centraliza a seção na página */
+      padding: 40px;
+      background: linear-gradient(145deg, #111111, #080808);
+      /* Fundo escuro elegante */
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      /* Moldura dourada sutil */
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+      gap: 40px;
+      /* Espaçamento moderno entre a foto e a div */
+  }
+
+  /* Moldura e Estilo da Foto */
+  .barbeiro img {
+      width: 320px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid var(--accent-gold);
+      /* Borda dourada em volta da foto */
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+      /* Brilho dourado suave */
+      flex-shrink: 0;
+      /* Impede a imagem de amassar */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  /* Efeito ao passar o mouse na imagem */
+  .barbeiro img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.3);
+  }
+
+  /* Estilo do Bloco de Texto */
+  .barbeiro div {
+      margin: 0;
+      /* Zerado para usar o gap do pai de forma limpa */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  /* Título */
+  .barbeiro div h3 {
+      font-family: var(--font-title);
+      font-size: 32px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      border-left: 4px solid var(--accent-gold);
+      /* Detalhe dourado na lateral */
+      padding-left: 15px;
+  }
+
+  /* Parágrafo */
+  .barbeiro div p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.8;
+      color: #cccccc;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+  }
+
+ /* --- ESTILIZAÇÃO DO RODAPÉ --- */
+ .rodape {
+     display: flex;
+     justify-content: space-around;
+     /* Distribui as colunas proporcionalmente */
+     align-items: flex-start;
+     /* Alinha o topo das colunas */
+     background-color: #0a0a0a;
+     color: #ffffff;
+     padding: 60px 40px;
+     border-top: 2px solid var(--accent-gold);
+     /* Linha dourada no topo do rodapé */
+     flex-wrap: wrap;
+     /* Garante que funcione bem em celulares */
+     gap: 30px;
+ }
+
+ .rodape div {
+     margin: 0;
+     /* Zerado para controle total pelo flexbox */
+     flex: 1;
+     min-width: 250px;
+     /* Garante uma largura mínima antes de quebrar a linha */
+ }
+
+ /* Títulos Principais (Contato / Horário) */
+ .rodape div h2 {
+     font-family: var(--font-title);
+     font-size: 24px;
+     color: var(--accent-gold);
+     margin-bottom: 25px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+     padding-bottom: 10px;
+     display: inline-block;
+ }
+
+ /* Subtítulos (Endereço, Telefone, Dias) */
+ .rodape div h3 {
+     font-size: 16px;
+     font-family: var(--font-heading);
+     color: #ffffff;
+     margin: 15px 0 5px 0;
+     text-transform: uppercase;
+     letter-spacing: 0.8px;
+ }
+
+ /* Textos e Informações */
+ .rodape div p {
+     font-family: var(--font-body);
+     font-size: 14px;
+     color: #aaaaaa;
+     line-height: 1.6;
+     margin: 0 0 10px 0;
+     white-space: pre-line;
+     /* Mantém as quebras de linha do seu endereço */
+ }
+
+ /* --- ESTILO DAS REDES SOCIAIS --- */
+ .rodape .rede {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     align-self: center;
+     /* Centraliza o bloco de ícones na altura do rodapé */
+ }
+
+ .rodape .rede i {
+     font-size: 20px;
+     color: var(--accent-gold);
+     background-color: #141414;
+     border: 1px solid rgba(212, 175, 55, 0.4);
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+     /* Transforma os ícones em círculos */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ /* Efeito ao passar o mouse nos ícones */
+ .rodape .rede i:hover {
+     background-color: var(--accent-gold);
+     color: #000000;
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+ }
+
+.Direitos{
+    display: block;
+    margin: 20px;
+}
+
+.Direitos p{
+    text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* --- TELAS MÉDIAS E TABLETS (Até 992px) --- */
+@media screen and (max-width: 992px) {
+
+    /* Ajustes na Capa */
+    .capa {
+        padding: 30px 20px;
+    }
+
+    .texto button,
+    .sevico button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Ajuste na Seção de Barbeiros */
+    .barbeiro {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .barbeiro img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .barbeiro div h3 {
+        border-left: none;
+        border-bottom: 3px solid var(--accent-gold);
+        padding-left: 0;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+}
+
+/* --- DISPOSITIVOS MÓVEIS / CELULARES (Até 768px) --- */
+@media screen and (max-width: 768px) {
+
+    /* Header & Logo */
+    .capa .logo {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .capa .logo .marco {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capa .logo .marco h1 {
+        margin: 10px 0 0 0;
+        font-size: 24px;
+    }
+
+    /* Texto e Banner Principal */
+    .texto {
+        margin-bottom: 40px;
+    }
+
+    .texto h1 {
+        font-size: 28px;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+
+    .texto button,
+    .sevico button {
+        width: 100%;
+        font-size: 20px;
+        height: 48px;
+        margin: 20px 0;
+    }
+
+    /* Títulos Gerais */
+    .sevico h2,
+    .produtos h2 {
+        font-size: 28px;
+    }
+
+    /* Cards de Serviços / Slideshow */
+    .sevico .slideshow img {
+        width: 280px;
+        height: 190px;
+    }
+
+    /* Tabela de Preços Responsiva */
+    .sevico .preco table {
+        width: 100%;
+    }
+
+    .sevico .preco table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .sevico .preco table td:last-child {
+        font-size: 14px;
+    }
+
+    /* Produtos */
+    .produtos .barbearia-Produtos {
+        width: 100%;
+        max-width: 320px;
+    }
+ /* ==========================================================================
+   ESTILIZAÇÃO CORRIGIDA DO RODAPÉ
+   ========================================================================== */
+ .rodape {
+     display: flex;
+     justify-content: space-around;
+     align-items: flex-start;
+     background-color: #0a0a0a;
+     color: #ffffff;
+     padding: 60px 20px;
+     border-top: 2px solid var(--accent-gold);
+     flex-wrap: wrap;
+     gap: 40px;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ .rodape div {
+     margin: 0;
+     flex: 1;
+     min-width: 280px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     /* Centraliza o conteúdo horizontalmente dentro do bloco */
+     text-align: center;
+     /* Centraliza todos os textos */
+ }
+
+ /* Títulos Principais (Contato / Horário) */
+ .rodape div h2 {
+     font-family: var(--font-title);
+     font-size: 24px;
+     color: var(--accent-gold);
+     margin-bottom: 25px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+     padding-bottom: 10px;
+     display: inline-block;
+     width: auto;
+ }
+
+ /* Subtítulos (Endereço, Telefone, Dias) */
+ .rodape div h3 {
+     font-size: 16px;
+     font-family: var(--font-heading);
+     color: #ffffff;
+     margin: 20px 0 6px 0;
+     text-transform: uppercase;
+     letter-spacing: 0.8px;
+     text-align: center;
+     width: 100%;
+ }
+
+ /* Textos e Informações */
+ .rodape div p {
+     font-family: var(--font-body);
+     font-size: 14px;
+     color: #aaaaaa;
+     line-height: 1.6;
+     margin: 0 0 8px 0;
+     white-space: pre-line;
+     text-align: center;
+     width: 100%;
+ }
+
+ /* Redes Sociais */
+ .rodape .rede {
+     display: flex;
+     flex-direction: row;
+     /* Força os ícones a ficarem lado a lado */
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     width: 100%;
+     margin-top: 20px;
+ }
+
+ .rodape .rede i {
+     font-size: 20px;
+     color: var(--accent-gold);
+     background-color: #141414;
+     border: 1px solid rgba(212, 175, 55, 0.4);
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .rodape .rede i:hover {
+     background-color: var(--accent-gold);
+     color: #000000;
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+ }
+
+ .Direitos {
+     display: block;
+     padding: 20px;
+ }
+
+ .Direitos p {
+     text-align: center;
+     font-family: var(--font-body);
+     font-size: 13px;
+     margin: 0;
+ }
+
+ /* --- AJUSTE RESPONSIVO MOBILE --- */
+ @media screen and (max-width: 768px) {
+     .rodape {
+         flex-direction: column;
+         align-items: center;
+         padding: 40px 20px;
+         gap: 35px;
+     }
+
+     .rodape div {
+         width: 100%;
+         min-width: 100%;
+     }
+
+     .rodape div h2 {
+         font-size: 20px;
+         margin-bottom: 15px;
+     }
+ }
+}
+
+/* --- CELULARES PEQUENOS (Até 480px) --- */
+@media screen and (max-width: 480px) {
+    .capa .logo .marco img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .texto h1 {
+        font-size: 22px;
+    }
+
+    .sevico .Pacotes .Plano {
+        width: 100%;
+    }
+}
