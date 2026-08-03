@@ -163,6 +163,7 @@
         </table>
         <br><br>
     </div>
+    
     <button type="submit" onclick="WhatsApp()">Agendar pelo WhatsApp</button>
     </div>
 <div class="produtos">
@@ -175,7 +176,7 @@
             <h3>Pomada Modeladora</h3>
             <p class="descricao">Efeito Matte e Alta Fixação</p>
             <span class="preco-produto">R$ 45,00</span>
-            <button class="btn-comprar">Comprar</button>
+            <button class="btn-comprar" onclick="Pomada()">Comprar</button>
         </div>
 
         <div class="barbearia-Produtos">
@@ -185,7 +186,7 @@
             <h3>Óleo para Barba</h3>
             <p class="descricao">Efeito Matte e Alta Fixação</p>
             <span class="preco-produto">R$ 35,00</span>
-            <button class="btn-comprar">Comprar</button>
+            <button class="btn-comprar" onclick="oleo()">Comprar</button>
         </div>
 
         <div class="barbearia-Produtos">
@@ -195,7 +196,7 @@
             <h3>Balm para Barba</h3>
             <p class="descricao">Efeito Matte e Alta Fixação</p>
             <span class="preco-produto">R$ 40,00</span>
-            <button class="btn-comprar">Comprar</button>
+            <button class="btn-comprar" onclick="balm()">Comprar</button>
         </div>
         <div class="barbearia-Produtos">
             <div class="foto-produto">
@@ -204,7 +205,7 @@
             <h3>Shampoo Masculino</h3>
             <p class="descricao">Efeito Matte e Alta Fixação</p>
             <span class="preco-produto">R$ 55,00</span>
-            <button class="btn-comprar">Comprar</button>
+            <button class="btn-comprar" onclick="Shampoo()">Comprar</button>
         </div>
     </div>
     <div class="barbeiro">
@@ -267,37 +268,7 @@
 <div class="Direitos">
     <p>© 2026 Black Crown Barber. Todos os direitos reservados.</p>
 </div>
-    <!-- Script JS para Rotação Infinita sem pausas -->
-    <script>
-        const track = document.getElementById('slideshowTrack');
-
-        // Duplica os cards dinamicamente para garantir que a rolagem infinita não mostre espaços vazios
-        track.innerHTML += track.innerHTML;
-
-        let speed = 1; // Velocidade da rotação (aumente ou diminua conforme preferir)
-        let currentPos = 0;
-
-        function animate() {
-            currentPos -= speed;
-
-            // Quando passar metade da largura (que é a lista original de itens), reseta suavemente a posição
-            if (Math.abs(currentPos) >= track.scrollWidth / 2) {
-                currentPos = 0;
-            }
-
-            track.style.transform = `translateX(${currentPos}px)`;
-            requestAnimationFrame(animate);
-        }
-
-        // Inicia a animação
-        animate();
-
-        // Pausa a rotação ao passar o mouse por cima do serviço (opcional)
-        const wrapper = document.querySelector('.slideshow-wrapper');
-        let normalSpeed = speed;
-        wrapper.addEventListener('mouseenter', () => speed = 0);
-        wrapper.addEventListener('mouseleave', () => speed = normalSpeed);
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
