@@ -148,8 +148,30 @@
 
   .Equipe .advogado div{
     margin: 20px;
+    background-color: var(--cor-1);
+    border-radius: 40px;
+  }
+
+  .Equipe .advogado div .texto .bi{
+    font-size: 50px;
+    margin: 15px;
+  }
+
+  .Equipe .advogado div .texto .bi:hover{
+    color: #4B3B2D;
   }
 
  .Equipe > .advogado > div > img{
-    height: 100vh;
+    height: 80vh;
+ }
+
+ .Equipe .ima-equipe{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+ }
+
+ .Equipe>.ima-equipe>.imagem>a{
+    text-decoration: none;
+    color: #fff;
  }
