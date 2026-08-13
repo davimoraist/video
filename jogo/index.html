@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPREVIA 3D - Simulação Empresarial</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CDN Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HUD Superior Esquerdo -->
+    <div id="hud-panel">
+        <div class="brand">EMPREVIA <span>3D</span></div>
+        <div class="divider"></div>
+        <div class="stat-row">💰 <span>Dinheiro:</span> <strong id="val-money">R$ 10.000</strong></div>
+        <div class="stat-row">🏢 <span>Empresas:</span> <strong id="val-companies">0</strong></div>
+        <div class="stat-row">📈 <span>Patrimônio:</span> <strong id="val-networth">R$ 10.000</strong></div>
+
+        <!-- Barra de Stamina -->
+        <div class="stamina-wrapper">
+            <div id="stamina-fill"></div>
+        </div>
+    </div>
+
+    <!-- Indicador Flutuante de Interação -->
+    <div id="interaction-card" class="hidden">
+        <div class="card-icon" id="inter-icon">🏛️</div>
+        <div class="card-info">
+            <h3 id="inter-title">PREFEITURA</h3>
+            <p>Pressione <kbd>E</kbd> para acessar</p>
+        </div>
+    </div>
+
+    <!-- Guia de Controles Inferior -->
+    <div id="controls-bar">
+        <div class="key-btn"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Mover</div>
+        <div class="key-btn"><kbd>SHIFT</kbd> Correr</div>
+        <div class="key-btn"><kbd>SPACE</kbd> Pular</div>
+        <div class="key-btn"><kbd>E</kbd> Interagir</div>
+        <div class="key-btn"><kbd>M</kbd> Mapa</div>
+        <div class="key-btn"><kbd>ESC</kbd> Menu</div>
+    </div>
+
+    <!-- Modal do Mapa da Cidade (Tecla M) -->
+    <div id="map-modal" class="modal hidden">
+        <div class="map-container">
+            <h2>MAPA DA CIDADE EMPRESARIAL</h2>
+            <div class="map-grid">
+                <div class="map-pin player-pin" style="top: 50%; left: 50%;">YOU</div>
+                <div class="map-pin gov-pin" style="top: 30%; left: 35%;">🏛️ Governo</div>
+                <div class="map-pin bank-pin" style="top: 30%; left: 65%;">🏦 Banco</div>
+                <div class="map-pin office-pin" style="top: 70%; left: 35%;">🏢 Escritórios</div>
+                <div class="map-pin shop-pin" style="top: 70%; left: 65%;">🏪 Comércio</div>
+            </div>
+            <p class="map-legend">Pressione <kbd>M</kbd> para fechar</p>
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
