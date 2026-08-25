@@ -1,177 +1,192 @@
  @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
-    --cor-1: #a1693a;
-    --font-Inter: "Inter",sans-serif;
-}
+ :root {
+   --cor-1: #a1693a;
+   --font-Inter: "Inter", sans-serif;
+ }
 
  * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
  }
 
- body{
-    background-color: #4B3B2D;
+ body {
+   background-color: #4B3B2D;
  }
 
- .menu{
-    display: flex;
-    margin: 0px;    
-    background-color: var(--cor-1);
+ .menu {
+   display: flex;
+   justify-content: space-between;
+   /* Logo na esquerda, Menu na direita */
+   align-items: center;
+   /* Centraliza verticalmente */
+   padding: 10px 40px;
+   background-color: var(--cor-1);
+   /* Espaçamento interno das bordas */
  }
 
  /* Container da logo + texto */
  .logo {
-     display: flex;
-     /* Coloca a imagem e o texto lado a lado */
-     align-items: center;
-     /* Centraliza o texto verticalmente com a imagem */
-     gap: 12px;
-      }
+   display: flex;
+   /* Coloca a imagem e o texto lado a lado */
+   align-items: center;
+   /* Centraliza o texto verticalmente com a imagem */
+   gap: 12px;
+ }
 
  /* Estilo do Texto (Advocacia Modelo) */
  .logo h1 {
-     margin: 0;
-     color: #5c0632;
-     /* Cor vinho/bordo exata da imagem */
-     font-size: 1.8rem;
-     /* Ajuste o tamanho do texto se preferir */
-     font-weight: 500;
-     /* Espessura da fonte */
-     line-height: 1.1;
-     /* Mantém as duas linhas bem próximas */
-     font-family: serif;
-     /* Fonte com serifa para um visual elegante */
+   margin: 0;
+   color: #5c0632;
+   /* Cor vinho/bordo exata da imagem */
+   font-size: 1.8rem;
+   /* Ajuste o tamanho do texto se preferir */
+   font-weight: 500;
+   /* Espessura da fonte */
+   line-height: 1.1;
+   /* Mantém as duas linhas bem próximas */
+   font-family: serif;
+   /* Fonte com serifa para um visual elegante */
  }
 
  /* Garantir tamanho correto da imagem */
  .logo img {
-     height: 75px;
-     /* Altura da imagem do logotipo */
-     width: auto;
+   height: 75px;
+   /* Altura da imagem do logotipo */
+   width: auto;
  }
 
-  /* 1. Alinha a Logo de um lado e o Menu do outro no Header */
-  .menu {
+ /* 2. Mantém o nav limpo */
+ .menu nav {
+   display: block;
+ }
+
+ /* 3. Coloca os links do menu em linha (lado a lado) */
+ .menu nav ul {
+   display: flex;
+   gap: 25px;
+   /* Espaço entre cada link */
+   margin: 0;
+   padding: 0;
+ }
+
+ /* 4. Remove os pontos da lista */
+ .menu nav ul li {
+   list-style-type: none;
+ }
+
+ /* 5. Estilo dos Links */
+ .menu nav ul li a {
+   text-decoration: none;
+   color: white;
+   font-family: var(--font-Inter);
+   font-size: 1rem;
+   transition: opacity 0.3s;
+ }
+
+ .menu nav ul li a:hover {
+   opacity: 0.8;
+   /* Efeito visual ao passar o mouse */
+ }
+
+ .capa {
+   background-image: url(imagem/capa-intio.png);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   height: 100vh;
+ }
+
+ .capa>p {
+   color: white;
+   padding: 150px 80px;
+   font-size: 36px;
+ }
+
+    .contracapa {
       display: flex;
-      justify-content: space-between;
-      /* Logo na esquerda, Menu na direita */
       align-items: center;
-      /* Centraliza verticalmente */
-      padding: 10px 40px;
-      /* Espaçamento interno das bordas */
-  }
-
-  /* 2. Mantém o nav limpo */
-  .menu nav {
-      display: block;
-  }
-
-  /* 3. Coloca os links do menu em linha (lado a lado) */
-  .menu nav ul {
-      display: flex;
-      gap: 25px;
-      /* Espaço entre cada link */
+      justify-content: center;
+      gap: 60px;
+      /* fundo escuro pra combinar com texto branco */
+      padding: 60px 80px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+  
+    .contracapa img {
+      height: 350px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+  
+    .contracapa>p {
+      color: #f5f5f5;
+      font-size: 30px;
+      line-height: 1.6;
+      font-family: 'Georgia', serif;
+      max-width: 600px;
       margin: 0;
-      padding: 0;
-  }
+    }
 
-  /* 4. Remove os pontos da lista */
-  .menu nav ul li {
-      list-style-type: none;
-  }
-
-  /* 5. Estilo dos Links */
-  .menu nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-family: var(--font-Inter);
-      font-size: 1rem;
-      transition: opacity 0.3s;
-  }
-
-  .menu nav ul li a:hover {
-      opacity: 0.8;
-      /* Efeito visual ao passar o mouse */
-  }
-
-  .capa{
-    background-image: url(imagem/capa-intio.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-  }
-
-  .capa>p {
-      color: white;
-      padding: 150px 80px;
-      font-size: 36px;
-  }
-
-  .contracapa{
-    display: flex;
-  }
-
-  .contracapa img{
-    height: 300px;
-    margin: 80px 0;
-  }
-
-  .contracapa > p{
-    color: white;
-        padding: 150px 80px;
-        font-size: 36px;
-  }
-
-  .Equipe{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-
-  .Equipe h1{
-    font-family: var(--font-Inter);
-  }
-
-  .Equipe .advogado {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 40px;
-  }
-
-  .Equipe .advogado div{
-    margin: 20px;
-    background-color: var(--cor-1);
-    border-radius: 40px;
-  }
-
-  .Equipe .advogado div .texto .bi{
-    font-size: 50px;
-    margin: 15px;
-  }
-
-  .Equipe .advogado div .texto .bi:hover{
-    color: #4B3B2D;
-  }
-
- .Equipe > .advogado > div > img{
-    height: 80vh;
+ .Equipe {
+   display: block;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
  }
 
- .Equipe .ima-equipe{
-    display: flex;
-    justify-content: center;
-    margin: 50px;
+ .Equipe h1 {
+   font-family: var(--font-Inter);
  }
 
- .Equipe>.ima-equipe>.imagem>a{
-    text-decoration: none;
-    color: #fff;
+ .Equipe .advogado {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin: 40px;
+ }
+
+ .Equipe .advogado div {
+   margin: 20px;
+   background-color: var(--cor-1);
+   border-radius: 40px;
+ }
+
+ .Equipe .advogado div .texto .bi {
+   font-size: 50px;
+   margin: 15px;
+ }
+
+ .Equipe .advogado div .texto .bi:hover {
+   color: #4B3B2D;
+ }
+
+ .Equipe>.advogado>div>img {
+   height: 80vh;
+ }
+
+ .Equipe .ima-equipe {
+   display: flex;
+   justify-content: center;
+   margin: 50px;
+ }
+
+ .Equipe>.ima-equipe>.imagem>a {
+   text-decoration: none;
+   font-size: 30px;
+   padding: 13px;
+   border-radius: 15px;
+   color: #fff;
+   border: 5px solid var(--cor-1);
+ }
+
+ .Equipe>.ima-equipe>p{
+  margin: 15px;
+  font-size: 20px;
+  text-align: justify;
  }
